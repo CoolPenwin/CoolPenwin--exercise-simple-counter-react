@@ -27,10 +27,10 @@ if (minutos===60){
 
 
   return (
-    <div className="d-flex">
-      <div className="">{horas}</div>
-      <div className="">{minutos}</div>
-      <div className="">{segundos}</div>
+    <div className="d-flex text-center justify-content-center ">
+      <div className="num">{horas}</div> H
+      <div className="num">{minutos}</div> M
+      <div className="num">{segundos}</div> S
     </div>
   );
 };
