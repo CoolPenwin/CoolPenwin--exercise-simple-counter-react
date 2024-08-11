@@ -1,15 +1,40 @@
+:root {
+  --Human: "Arial", sans-serif;
+}
 @font-face {
-    font-family: 'Fuente-SW-Aurebesh';
-    src: url('../fonts/Aurebesh.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Fuente-SW-Aurebesh";
+  src: url("../fonts/Aurebesh.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 body {
-    font-family: 'Fuente-SW-Aurebesh', sans-serif;
-    vertical-align: bottom;
-    font-size: 4rem;
+  font-family: "Fuente-SW-Aurebesh", sans-serif;
+  vertical-align: bottom;
+  font-size: 4rem;
 }
-.num{
-    font-size: 8rem;
+.num {
+  font-size: 8rem;
+}
+head {
+  font-family: "Fuente-SW-Aurebesh", sans-serif;
+}
 
+.humanLang {
+  font-family: var(--Human);
+}
+
+.digito {
+  display: inline-block;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 55%;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 30px;
+  text-align: center;
+  width: 50px;
+  height: 60px;
+  line-height: 35px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
 }

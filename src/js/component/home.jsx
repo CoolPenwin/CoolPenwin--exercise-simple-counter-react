@@ -1,11 +1,15 @@
 import React from "react";
-import Contador from "./Contador.jsx";
+import ContadorTotal from "./ContadorTotal.jsx";
+import SimpleCounter from "./SimpleCounter.jsx";
+import Botonera from "./Botonera.jsx";
 
 //create your first component
 const Home = () => {
   return (
     <>
-      <Contador />
+      <ContadorTotal />
+      <SimpleCounter />
+      <Botonera />
     </>
   );
 };
