@@ -10,6 +10,12 @@
 body {
   font-family: "Fuente-SW-Aurebesh", sans-serif;
   vertical-align: bottom;
+  font-size: 2rem;
+}
+.crono {
+  size: 2rem;
+}
+.tot {
   font-size: 4rem;
 }
 .num {
@@ -23,7 +29,7 @@ head {
   font-family: var(--Human);
 }
 
-.digito {
+/* .digito {
   display: inline-block;
   padding: 10px;
   margin-right: 10px;
@@ -37,4 +43,10 @@ head {
   line-height: 35px;
   transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
+} */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

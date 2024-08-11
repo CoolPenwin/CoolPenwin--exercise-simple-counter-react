@@ -1,7 +1,6 @@
 import React from "react";
 import ContadorTotal from "./ContadorTotal.jsx";
 import SimpleCounter from "./SimpleCounter.jsx";
-import Botonera from "./Botonera.jsx";
 
 //create your first component
 const Home = () => {
@@ -9,7 +8,6 @@ const Home = () => {
     <>
       <ContadorTotal />
       <SimpleCounter />
-      <Botonera />
     </>
   );
 };

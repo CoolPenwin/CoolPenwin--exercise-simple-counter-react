@@ -23,7 +23,7 @@ const ContadorTotal = () => {
   }, [segundos]);
 
   return (
-    <div className="d-flex text-center justify-content-center ">
+    <div className="tot d-flex text-center justify-content-center ">
       <div className="num">{horas}</div> H<div className="num">{minutos}</div> M
       <div className="num">{segundos}</div> S
     </div>
