@@ -1,6 +1,7 @@
 import React from "react";
 import ContadorTotal from "./ContadorTotal.jsx";
 import SimpleCounter from "./SimpleCounter.jsx";
+import Footer from "./footer.jsx";
 
 //create your first component
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
     <>
       <ContadorTotal />
       <SimpleCounter />
+      <Footer/>
     </>
   );
 };
