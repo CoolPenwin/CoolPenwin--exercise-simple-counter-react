@@ -1,9 +1,10 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = ({ isPressed }) => {
   return (
+    <div className={isPressed ? 'human-text' : 'font-aurabesh'}>
     <div className="container d-flex justify-content-center">
-      <div className="row">
+      <div className="row ">
         <div className="fixed-bottom p-4">
           Made with 🍑 by
           <a href="https://github.com/CoolPenwin">
@@ -32,11 +33,12 @@ const Footer = () => {
                 width: "35px",
               }}
               alt="logo"
-            />
+              />
           </a>
         </div>
       </div>
     </div>
+              </div>
   );
 };
 

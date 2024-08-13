@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import cronometro from "../../img/cronometro.png";
 
-const SimpleCounter = () => {
+const SimpleCounter = ({ isPressed }) => {
   const [segundos, setSegundos] = useState(0);
   const [isRunning, setIsRunning] = useState(false); // Estado para saber si el contador está en marcha
   const [inputValue, setInputValue] = useState(""); // Estado para almacenar el valor del input
@@ -47,12 +47,14 @@ const SimpleCounter = () => {
 
   return (
     <>
+     
       <div className="digito d-flex text-center justify-content-center">
         {digits.map((digit, index) => (
           <div className="digito" key={index}>{digit}</div>
         ))}
         <img className="crono" src={cronometro} />
       </div>
+      <div className={isPressed ? 'human-text' : 'font-aurabesh'}>
       <div>
         <button onClick={handlePlay}>Play</button>
         <button onClick={handlePause}>Pause</button>
@@ -67,6 +69,7 @@ const SimpleCounter = () => {
           placeholder="Set countdown"
         />
         <button onClick={handleSetCountdown}>Set Countdown</button>
+      </div>
       </div>
     </>
   );
