@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import cronometro from "../../img/cronometro.png";
+import Swal from 'sweetalert2';
+
 
 const SimpleCounter = ({ isPressed }) => {
   const [segundos, setSegundos] = useState(0);
@@ -19,7 +21,13 @@ const SimpleCounter = ({ isPressed }) => {
             return prev + 1;
           } else {
             clearInterval(interval);
-            alert("El contador ha llegado a 0");
+            alert=Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Your work has been saved",
+              showConfirmButton: false,
+              timer: 1500
+            });
             return 0;
           }
         });
@@ -60,7 +68,7 @@ const SimpleCounter = ({ isPressed }) => {
 
   return (
     <>
-      <div className="digito d-flex text-center justify-content-center">
+      <div className=" d-flex text-center justify-content-center">
         {digits.map((digit, index) => (
           <div className="digito" key={index}>{digit}</div>
         ))}

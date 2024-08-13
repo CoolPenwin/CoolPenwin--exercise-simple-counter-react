@@ -19,7 +19,6 @@
   font-family: "Fuente-SW-Aurebesh", sans-serif;
 }
 
-
 .fixed-button {
   position: fixed;
   top: 10px;
@@ -37,7 +36,8 @@ body {
   font-size: 2rem;
 }
 .crono {
-  size: 2rem;
+  width: 64px;
+  height: 64px;
 }
 .tot {
   font-size: 4rem;
@@ -53,8 +53,9 @@ head {
   font-family: var(--Human);
 }
 
-/* .digito {
-  display: inline-block;
+ .digito {
+  font-size: 3rem;
+  /* display: inline-block;
   padding: 10px;
   margin-right: 10px;
   border-radius: 55%;
@@ -66,8 +67,8 @@ head {
   height: 60px;
   line-height: 35px;
   transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
-  cursor: pointer;
-} */
+  cursor: pointer; */
+} 
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
