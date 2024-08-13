@@ -12,14 +12,27 @@ const SimpleCounter = ({ isPressed }) => {
     let interval;
     if (isRunning) {
       interval = setInterval(() => {
-        setSegundos((prev) => prev + 1);
+        setSegundos((prev) => {
+          if (inputValue && prev > 0) {
+            return prev - 1;
+          } else if (!inputValue) {
+            return prev + 1;
+          } else {
+            clearInterval(interval);
+            alert("El contador ha llegado a 0");
+            return 0;
+          }
+        });
       }, 1000);
     }
     return () => clearInterval(interval);
-  }, [isRunning]); // Dependencia en isRunning
+  }, [isRunning, inputValue]);
 
   // Función para iniciar el contador
   const handlePlay = () => {
+    if (inputValue) {
+      setSegundos(parseInt(inputValue, 10));
+    }
     setIsRunning(true);
   };
 
@@ -47,7 +60,6 @@ const SimpleCounter = ({ isPressed }) => {
 
   return (
     <>
-     
       <div className="digito d-flex text-center justify-content-center">
         {digits.map((digit, index) => (
           <div className="digito" key={index}>{digit}</div>
@@ -55,21 +67,20 @@ const SimpleCounter = ({ isPressed }) => {
         <img className="crono" src={cronometro} />
       </div>
       <div className={isPressed ? 'human-text' : 'font-aurabesh'}>
-      <div>
-        <button onClick={handlePlay}>Play</button>
-        <button onClick={handlePause}>Pause</button>
-        <button onClick={handleStop}>Stop</button>
-      </div>
-      <div>
-        <input
-          type="number"
-          value={inputValue}
-          onChange={handleInputChange}
-          onKeyDown={handleSetCountdown}
-          placeholder="Set countdown"
-        />
-        <button onClick={handleSetCountdown}>Set Countdown</button>
-      </div>
+        <div>
+          <button onClick={handlePlay}>Play</button>
+          <button onClick={handlePause}>Pause</button>
+          <button onClick={handleStop}>Stop</button>
+        </div>
+        <div>
+          <input
+            type="number"
+            value={inputValue}
+            onChange={handleInputChange}
+            placeholder="Set countdown"
+          />
+          <button onClick={handleSetCountdown}>Set Countdown</button>
+        </div>
       </div>
     </>
   );
