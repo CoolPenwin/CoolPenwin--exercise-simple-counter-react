@@ -6,6 +6,7 @@ import Footer from "./footer.jsx";
 import TranslateButton from "./buttonTranslate.jsx";
 
 import ExcuseMoi_Button from './BotonVistaMejoras.jsx';
+import FooterCool from './footer cool.jsx';
 
 
 
@@ -21,13 +22,20 @@ const Home = () => {
     <div>
       <div className="human-text" >
 
-      <ExcuseMoi_Button 
-    
-      showImprovements={showImprovements} 
-      toggleImprovements={toggleImprovements} 
-      />
+        <ExcuseMoi_Button     
+        showImprovements={showImprovements} 
+        toggleImprovements={toggleImprovements} 
+        />
+
       </div>
-      <SimpleCounter isPressed={true} />
+      {!showImprovements && (
+  <div className="human-text">
+    <SimpleCounter isPressed={true} />
+    {/* Otros componentes básicos */}
+    <Footer isPressed={true} />
+
+  </div>
+)}
       
       {showImprovements && (
         <>
@@ -40,7 +48,8 @@ const Home = () => {
         
         <ContadorTotal />
         <SimpleCounter isPressed={isPressed} />
-        <Footer isPressed={isPressed} />
+        <FooterCool isPressed={isPressed} />
+
         </>
       )}
     </div>

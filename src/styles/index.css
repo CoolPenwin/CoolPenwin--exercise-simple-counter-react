@@ -23,7 +23,7 @@
   position: fixed;
   top: 10px;
   right: 10px;
-  z-index: 1000; /* Asegúrate de que el botón esté por encima de otros elementos */
+  z-index: 1000; 
 }
 
 
